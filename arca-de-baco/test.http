@@ -1,1 +1,11 @@
 # node modules/test/testConnection.js
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "João Teste",
+  "email": "joao",
+  "password": "123456",
+  "phone": "44999999999",
+  "age": 22
+}
