@@ -9,3 +9,10 @@ Content-Type: application/json
   "phone": "44999999999",
   "age": 22
 }
+
+### Listar clientes
+GET http://localhost:3000/api/users
+
+### DELETE cliente
+# DELETE http://localhost:3000/api/users/1
+DELETE http://localhost:3000/api/users/1

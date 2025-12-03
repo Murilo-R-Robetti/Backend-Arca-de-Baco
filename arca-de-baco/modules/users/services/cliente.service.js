@@ -23,4 +23,21 @@ export class ClienteService {
 
     return this.repo.create({ name, email, password, phone, age });
   }
+
+  async listClientes() {
+    return this.repo.list();
+  }
+
+//   async deleteCliente(id) {
+//   if (!id) throw new Error("ID é obrigatório");
+
+//   const deleted = await this.repo.delete(id);
+
+//   if (!deleted) {
+//     throw new Error("Usuário não encontrado");
+//   }
+
+//   return { message: "Usuário removido com sucesso" };
+// }
+
 }
