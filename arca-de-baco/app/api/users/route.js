@@ -19,3 +19,8 @@ export async function DELETE(request) {
   return controller.delete(body.id); // passa pro controller
 }
 
+export async function PUT(request) {
+  const body = await request.json(); // { id, name, email, ... }
+  return controller.update(body);
+}
+

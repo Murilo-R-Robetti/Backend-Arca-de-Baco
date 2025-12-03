@@ -51,4 +51,17 @@ export class ClienteController {
       );
     }
   }
+
+  async update(data) {
+  try {
+    const result = await this.service.updateCliente(data);
+    return Response.json(result, { status: 200 });
+  } catch (error) {
+    return Response.json(
+      { error: error.message || "Erro ao atualizar usuário" },
+      { status: 400 }
+    );
+  }
+}
+
 }

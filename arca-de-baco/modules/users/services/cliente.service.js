@@ -39,5 +39,35 @@ export class ClienteService {
 
 //   return { message: "Usuário removido com sucesso" };
 // }
+ async deleteCliente(id) {
+    if (!id) throw new Error("ID é obrigatório.");
+
+    const exists = await this.repo.findById(id);
+    if (!exists) throw new Error("Usuário não encontrado.");
+
+    return this.repo.delete(id);
+  }
+
+  async updateCliente(data) {
+  const { id, name, email, password, phone, age } = data;
+
+  if (!id) throw new Error("ID é obrigatório.");
+
+  const exists = await this.repo.findById(id);
+  if (!exists) throw new Error("Usuário não encontrado.");
+
+  const updateData = {};
+
+  if (name) updateData.name = name;
+  if (email) updateData.email = email;
+  if (password) updateData.password = password;
+  if (phone) updateData.phone = phone;
+  if (age) {
+    if (age < 18) throw new Error("O usuário deve ter pelo menos 18 anos.");
+    updateData.age = age;
+  }
+
+  return this.repo.update(id, updateData);
+}
 
 }

@@ -3,16 +3,29 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "name": "João Teste",
-  "email": "joao",
+  "name": "noli",
+  "email": "norli",
   "password": "123456",
   "phone": "44999999999",
-  "age": 22
+  "age": 23
 }
 
 ### Listar clientes
 GET http://localhost:3000/api/users
 
-### DELETE cliente
-# DELETE http://localhost:3000/api/users/1
-DELETE http://localhost:3000/api/users/1
+### deletar clientes
+DELETE http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "id": "e8a35c9f-6c75-4691-b1a3-04e612e43865" 
+}
+###Editar 
+PUT http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "id": "c0482980-807c-4e83-b477-698ee9504e80",
+  "name": "Chance",
+  "phone": "4499999999"
+}

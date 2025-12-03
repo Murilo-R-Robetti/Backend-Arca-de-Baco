@@ -15,6 +15,20 @@ export class ClienteRepository {
     return data;
   }
 
+  async findById(id) {
+    const { data, error } = await supabase
+      .from("clientes")
+      .select("*")
+      .eq("id", id)
+      .single();
+
+    if (error && error.code !== "PGRST116") {
+      throw error;
+    }
+
+    return data;
+  }
+
   async create(data) {
     const { data: cliente, error } = await supabase
       .from("clientes")
@@ -36,17 +50,28 @@ export class ClienteRepository {
 
     return data;
   }
+
   async delete(id) {
-  const { data, error } = await supabase
+    const { error } = await supabase
+      .from("clientes")
+      .delete()
+      .eq("id", id);
+
+    if (error) throw error;
+
+    return { message: "Cliente deletado com sucesso." };
+  }
+
+  async update(id, data) {
+  const { data: updated, error } = await supabase
     .from("clientes")
-    .delete()
+    .update(data)
     .eq("id", id)
     .select()
     .single();
 
   if (error) throw error;
 
-  return data;
+  return updated;
 }
-
 }
