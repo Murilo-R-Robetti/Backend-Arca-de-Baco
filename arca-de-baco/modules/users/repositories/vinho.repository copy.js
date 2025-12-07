@@ -1,11 +1,11 @@
 import { supabase } from "@/infra/supabase.js";
 
 export class VinhoRepository {
-  async findByEmail(email) {
+  async findByName(name) {
     const { data, error } = await supabase
       .from("vinhos")
       .select("*")
-      .eq("email", email)
+      .eq("name", name)
       .single();
 
     if (error && error.code !== "PGRST116") {
