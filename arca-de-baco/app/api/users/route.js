@@ -15,12 +15,13 @@ export async function GET() {
 //   return controller.delete(params.id);
 // }
 export async function DELETE(request) {
-  const body = await request.json(); // aqui vem o id
-  return controller.delete(body.id); // passa pro controller
+  const body = await request.json(); 
+  return controller.delete(body.id); 
 }
 
 export async function PUT(request) {
-  const body = await request.json(); // { id, name, email, ... }
+  const body = await request.json(); 
   return controller.update(body);
 }
 
+// Feito

@@ -29,3 +29,98 @@ Content-Type: application/json
   "name": "Chance",
   "phone": "4499999999"
 }
+
+###Listar vinhos
+GET http://localhost:3000/api/vinhos
+
+###Criar vinhos
+POST http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "name": "Vinhozinho",
+  "safra": "2018",
+  "estoque": 50
+}
+
+### Atualizar vinho
+PUT http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "id": "0c77b3ae-f7fa-4c6d-8abc-f57f5c3d67c0",
+  "name": "Merlot aa",
+  "safra": "2020",
+  "estoque": 55
+}
+
+
+### deletar vinhos
+DELETE http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "id": "38d9e7d6-5014-4ac2-ba5d-8fa0e3529659" 
+}
+
+
+###Criar um sommelier 
+POST http://localhost:3000/api/sommelier
+Content-Type: application/json
+
+{
+  "name": "Carlos Almeida",
+  "especialidade": "Vinhos Tintos",
+  "contato": "carlos@vinhos.com"
+}
+
+###Listar sommeliers 
+GET http://localhost:3000/api/sommelier
+
+###Atualizar
+PUT http://localhost:3000/api/sommelier
+Content-Type: application/json
+
+{
+  "id": "3bc10807-c478-48ce-89f4-3568df83764a",
+  "name": "Carlos Ribeiro",
+  "especialidade": "Espumantes"
+}
+
+###Agora deletando 
+DELETE http://localhost:3000/api/sommelier
+Content-Type: application/json
+
+{
+  "id": "3bc10807-c478-48ce-89f4-3568df83764a"
+}
+
+
+###comprando algo 
+POST http://localhost:3000/api/compra
+Content-Type: application/json
+
+{
+  "formas_pagamento": "Cartão",
+  "id_cliente": "34f6241e-26f7-460e-81a8-b9d86d6a2024"
+}
+
+###Listando compras
+GET http://localhost:3000/api/compra
+
+###atualizando compra 
+PUT http://localhost:3000/api/compra
+Content-Type: application/json
+
+{
+  "id": "fc4a11e8-c6e7-4596-9adc-2dfeb6097b52",
+  "formas_pagamento": "Pix"
+}
+
+###deletando compra 
+DELETE http://localhost:3000/api/compra
+Content-Type: application/json
+
+{
+  "id": "fc4a11e8-c6e7-4596-9adc-2dfeb6097b52"
+}

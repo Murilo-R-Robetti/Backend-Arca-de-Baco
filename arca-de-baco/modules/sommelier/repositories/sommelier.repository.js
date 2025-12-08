@@ -1,11 +1,11 @@
 import { supabase } from "@/infra/supabase.js";
 
-export class ClienteRepository {
-  async findByEmail(email) {
+export class SommelierRepository {
+  async findByName(name) {
     const { data, error } = await supabase
-      .from("clientes")
+      .from("sommelier")
       .select("*")
-      .eq("email", email)
+      .eq("name", name)
       .single();
 
     if (error && error.code !== "PGRST116") {
@@ -17,7 +17,7 @@ export class ClienteRepository {
 
   async findById(id) {
     const { data, error } = await supabase
-      .from("clientes")
+      .from("sommelier")
       .select("*")
       .eq("id", id)
       .single();
@@ -30,20 +30,20 @@ export class ClienteRepository {
   }
 
   async create(data) {
-    const { data: cliente, error } = await supabase
-      .from("clientes")
+    const { data: sommelier, error } = await supabase
+      .from("sommelier")
       .insert(data)
       .select()
       .single();
 
     if (error) throw error;
 
-    return cliente;
+    return sommelier;
   }
 
   async list() {
     const { data, error } = await supabase
-      .from("clientes")
+      .from("sommelier")
       .select("*");
 
     if (error) throw error;
@@ -53,18 +53,18 @@ export class ClienteRepository {
 
   async delete(id) {
     const { error } = await supabase
-      .from("clientes")
+      .from("sommelier")
       .delete()
       .eq("id", id);
 
     if (error) throw error;
 
-    return { message: "Cliente deletado com sucesso." };
+    return { message: "Sommelier deletado com sucesso." };
   }
 
   async update(id, data) {
   const { data: updated, error } = await supabase
-    .from("clientes")
+    .from("sommelier")
     .update(data)
     .eq("id", id)
     .select()
@@ -75,4 +75,5 @@ export class ClienteRepository {
   return updated;
 }
 }
+
 // Feito
