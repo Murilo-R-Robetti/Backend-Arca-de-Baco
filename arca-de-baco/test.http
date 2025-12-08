@@ -38,9 +38,9 @@ POST http://localhost:3000/api/vinhos
 Content-Type: application/json
 
 {
-  "name": "Vinhozinho",
-  "safra": "2018",
-  "estoque": 50
+  "name": "Vinho azul",
+  "safra": "2010",
+  "estoque": 30
 }
 
 ### Atualizar vinho
@@ -101,7 +101,7 @@ POST http://localhost:3000/api/compra
 Content-Type: application/json
 
 {
-  "formas_pagamento": "Cartão",
+  "formas_pagamento": "pix",
   "id_cliente": "34f6241e-26f7-460e-81a8-b9d86d6a2024"
 }
 
@@ -123,4 +123,36 @@ Content-Type: application/json
 
 {
   "id": "fc4a11e8-c6e7-4596-9adc-2dfeb6097b52"
+}
+
+### Criar item_compra
+POST http://localhost:3000/api/item_compra
+Content-Type: application/json
+
+{
+  "id_vinho": "0c77b3ae-f7fa-4c6d-8abc-f57f5c3d67c0",
+  "id_compra": "5d49d450-2bbf-418a-8a0d-c7af8da8aa3a",
+  "preco": 59.90,
+  "quantidade": 2
+}
+
+### Listar itens de compra
+GET http://localhost:3000/api/item_compra
+
+### Atualizar item_compra
+PUT http://localhost:3000/api/item_compra
+Content-Type: application/json
+
+{
+  "id": "7f90889f-8dee-4614-bd8f-b8c199511370",
+  "preco": 69.90,
+  "quantidade": 3
+}
+
+### Deletar item_compra
+DELETE http://localhost:3000/api/item_compra
+Content-Type: application/json
+
+{
+  "id": "7f90889f-8dee-4614-bd8f-b8c199511370"
 }
