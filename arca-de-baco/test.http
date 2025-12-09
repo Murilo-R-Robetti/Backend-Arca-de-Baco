@@ -156,3 +156,68 @@ Content-Type: application/json
 {
   "id": "7f90889f-8dee-4614-bd8f-b8c199511370"
 }
+
+### Criar país de origem
+POST http://localhost:3000/api/pais_origem
+Content-Type: application/json
+
+{
+  "name": "Japão"
+}
+
+###
+
+### Listar países de origem
+GET http://localhost:3000/api/pais_origem
+
+###
+
+### Atualizar país de origem
+PUT http://localhost:3000/api/pais_origem
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Argentina"
+}
+
+
+### Deletar país de origem
+DELETE http://localhost:3000/api/pais_origem
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###Criar vinicola 
+POST http://localhost:3000/api/vinicola
+Content-Type: application/json
+
+{
+  "name": "Casa Valduga",
+  "regiao": "Vale dos Vinhedos",
+  "contato": "+55 54 99999-0000"
+}
+
+###Listar
+GET http://localhost:3000/api/vinicola
+
+###Atualizar
+PUT http://localhost:3000/api/vinicola
+Content-Type: application/json
+
+{
+  "id": "7decbe41-429d-4ff7-a3d2-a8f10204d12e",
+  "name": "Casa Valduga Premium",
+  "regiao": "Vale dos Vinhedos - RS",
+  "contato": "+55 54 98888-7777"
+}
+
+###Deletar 
+DELETE http://localhost:3000/api/vinicola
+Content-Type: application/json
+
+{
+  "id": "7decbe41-429d-4ff7-a3d2-a8f10204d12e"
+}
