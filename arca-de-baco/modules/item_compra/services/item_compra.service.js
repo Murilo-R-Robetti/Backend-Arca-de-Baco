@@ -12,7 +12,6 @@ export class ItemCompraService {
     if (!id_vinho || !id_compra || !preco)
       throw new Error("id_vinho, id_compra e preco são obrigatórios!");
 
-    // valida vinho
     const { data: vinho } = await supabase
       .from("vinhos")
       .select("id")
@@ -20,7 +19,6 @@ export class ItemCompraService {
       .single();
     if (!vinho) throw new Error("Vinho não encontrado.");
 
-    // valida compra
     const { data: compra } = await supabase
       .from("compra")
       .select("id")

@@ -51,4 +51,5 @@ export class VinhoController {
   }
 }
 
-// Precisa terminar 
+// Tá parcialmente pronto, é preciso ter as outras tabelas de dependência.
+// Falta add a Fk de id_tipo, id_tipo_uva e id_marca

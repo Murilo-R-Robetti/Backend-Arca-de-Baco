@@ -162,7 +162,7 @@ POST http://localhost:3000/api/pais_origem
 Content-Type: application/json
 
 {
-  "name": "Japão"
+  "name": "Brasil"
 }
 
 ###
@@ -177,7 +177,7 @@ PUT http://localhost:3000/api/pais_origem
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": "00a06957-c605-4065-8814-1edace58370d",
   "name": "Argentina"
 }
 
@@ -187,7 +187,7 @@ DELETE http://localhost:3000/api/pais_origem
 Content-Type: application/json
 
 {
-  "id": 1
+  "id": "00a06957-c605-4065-8814-1edace58370d"
 }
 
 ###Criar vinicola 
@@ -220,4 +220,40 @@ Content-Type: application/json
 
 {
   "id": "7decbe41-429d-4ff7-a3d2-a8f10204d12e"
+}
+
+### Criar vinho
+POST http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "name": "Cabernet Teste",
+  "safra": 2018,
+  "estoque": 10,
+  "vinicola_id": "f9314c81-2530-475f-8e35-b4658c021df2",
+  "pais_origem_id": "9798f256-a63d-4e7f-a15f-ddfb695a3341"
+}
+
+### Listar vinhos
+GET http://localhost:3000/api/vinhos
+
+### Buscar um vinho pelo ID
+GET http://localhost:3000/api/vinhos?id=UUID_AQUI
+
+### Atualizar vinho
+PUT http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "id": "6bac0249-f35a-4aaa-80f5-1f061bfd0c4c",
+  "name": "Cabernet Alterado",
+  "estoque": 50
+}
+
+### Deletar vinho
+DELETE http://localhost:3000/api/vinhos
+Content-Type: application/json
+
+{
+  "id": "6bac0249-f35a-4aaa-80f5-1f061bfd0c4c"
 }

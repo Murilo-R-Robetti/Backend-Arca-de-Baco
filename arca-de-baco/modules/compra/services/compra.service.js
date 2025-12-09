@@ -13,7 +13,6 @@ export class CompraService {
       throw new Error("Forma de pagamento e ID do cliente são obrigatórios.");
     }
 
-    // Verifica se o cliente existe
     const { data: cliente, error } = await supabase
       .from("clientes")
       .select("*")

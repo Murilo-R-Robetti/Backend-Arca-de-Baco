@@ -29,17 +29,6 @@ export class ClienteController {
     }
   }
 
-//   async delete(id) {
-//   try {
-//     const deleted = await this.service.deleteCliente(id);
-//     return Response.json(deleted, { status: 200 });
-//   } catch (error) {
-//     return Response.json(
-//       { error: error.message || "Erro ao deletar usuário" },
-//       { status: 400 }
-//     );
-//   }
-// }
   async delete(id) {
     try {
       const result = await this.service.deleteCliente(id);

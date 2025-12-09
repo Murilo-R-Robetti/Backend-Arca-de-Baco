@@ -76,4 +76,4 @@ export class VinhoRepository {
 }
 }
 
-// Precisa terminar
+// Tá parcialmente pronto, é preciso ter as outras tabelas de dependência.
