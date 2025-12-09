@@ -257,3 +257,31 @@ Content-Type: application/json
 {
   "id": "6bac0249-f35a-4aaa-80f5-1f061bfd0c4c"
 }
+ 
+###Criadno marca 
+POST http://localhost:3000/api/marca
+Content-Type: application/json
+
+{
+  "name": "Casillero del Diablo"
+}
+###Listando 
+GET http://localhost:3000/api/marca
+
+###Atualizando 
+PUT http://localhost:3000/api/marca
+Content-Type: application/json
+
+{
+  "id": "b24ed1c8-b74d-4617-8ba9-bbc2d98d52a3",
+  "name": "Santa Helena"
+}
+
+###Deletando 
+DELETE http://localhost:3000/api/marca
+Content-Type: application/json
+
+{
+  "id": "b24ed1c8-b74d-4617-8ba9-bbc2d98d52a3"
+}
+
