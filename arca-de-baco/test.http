@@ -3,10 +3,10 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "name": "noli",
-  "email": "norli",
+  "name": "Jose Teste",
+  "email": "teste",
   "password": "123456",
-  "phone": "44999999999",
+  "phone": "44999999989",
   "age": 23
 }
 
