@@ -316,3 +316,60 @@ Content-Type: application/json
 {
   "id": ""
 }
+
+
+### Criar tipo de uva
+POST http://localhost:3000/api/tipo_uva
+Content-Type: application/json
+
+{
+  "name": "Cabernet Sauvignon"
+}
+### Listar tipos de uva
+GET http://localhost:3000/api/tipo_uva
+### Atualizar tipo de uva
+PUT http://localhost:3000/api/tipo_uva
+Content-Type: application/json
+
+{
+  "id": "f04523a9-a2c9-4c71-a494-e767a5640631",
+  "name": "Merlot"
+}
+### Deletar tipo de uva
+DELETE http://localhost:3000/api/tipo_uva
+Content-Type: application/json
+
+{
+  "id": "f04523a9-a2c9-4c71-a494-e767a5640631"
+}
+
+### criando um fornecedor 
+POST http://localhost:3000/api/fornecedor
+Content-Type: application/json
+
+{
+  "name": "Adega do Sul",
+  "pais": "Brasil",
+  "contato": "contato@adegadosul.com"
+}
+
+###
+GET http://localhost:3000/api/fornecedor
+###
+PUT http://localhost:3000/api/fornecedor
+Content-Type: application/json
+
+{
+  "id": "",
+  "name": "Adega do Sul Premium",
+  "pais": "Argentina",
+  "contato": "novoemail@adegadosul.com"
+}
+
+###
+DELETE http://localhost:3000/api/fornecedor
+Content-Type: application/json
+
+{
+  "id": ""
+}
