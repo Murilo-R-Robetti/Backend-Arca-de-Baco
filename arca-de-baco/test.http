@@ -284,3 +284,36 @@ Content-Type: application/json
 {
   "id": "b24ed1c8-b74d-4617-8ba9-bbc2d98d52a3"
 }
+
+
+###Criando vinicola/marca
+POST http://localhost:3000/api/vinicola_tem_marca
+Content-Type: application/json
+
+{
+  "id_vinicola": "f9314c81-2530-475f-8e35-b4658c021df2",
+  "id_marca": "b24ed1c8-b74d-4617-8ba9-bbc2d98d52a3"
+}
+
+###Listando 
+GET http://localhost:3000/api/vinicola_tem_marca
+
+
+###Atualizando
+PUT http://localhost:3000/api/vinicola_tem_marca
+Content-Type: application/json
+
+{
+  "id": "",
+  "id_vinicola": "",
+  "id_marca": ""
+}
+
+###Deletando
+DELETE http://localhost:3000/api/vinicola_tem_marca
+Content-Type: application/json
+
+{
+  "id": ""
+}
+
